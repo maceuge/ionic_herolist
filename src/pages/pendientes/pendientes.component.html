@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title align="center">Pendientes</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-list *ngIf="check">
+        <ion-list-header>Lista de Tareas Pendientes</ion-list-header>
+        <button ion-item *ngFor="let hero of heros" (click)="itemSelected(hero.id, hero.name)">
+          {{ hero.name }}
+        </button>
+    </ion-list>
+
+    <ion-list *ngIf="!check">
+        <ion-list-header>Lista de Tareas Pendientes</ion-list-header>
+        <ion-item>
+            No hay Tareas para Hacer...
+        </ion-item>
+    </ion-list>
+
+    <ion-fab right bottom>
+        <button ion-fab color="danger" (click)="showPrompt()"><ion-icon name="add"></ion-icon></button>
+    </ion-fab>
+
+</ion-content>

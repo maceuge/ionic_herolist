@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title align="center">
+            Finalizados
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+        <ion-list-header>Lista de Finalizados</ion-list-header>
+        <button ion-item *ngFor="let hero of heroList" (click)="deleteHero(heroList.indexOf(hero))">
+                {{ hero }}
+        </button>
+    </ion-list>
+</ion-content>
